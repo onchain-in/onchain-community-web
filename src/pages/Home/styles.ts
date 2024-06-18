@@ -10,7 +10,6 @@ export const Container = styled.div`
   background: linear-gradient(145deg, ${EColor.COLOR_PRIMARY}, ${EColor.COLOR_SUB});
 `;
 
-
 export const Card = styled.div`
   background: white;
   border-radius: 8px;
@@ -22,7 +21,7 @@ export const Card = styled.div`
 `;
 
 export const NewsInfo = styled.div`
-  
+  margin-bottom: 20px;
 `;
 
 export const NewsTitle = styled.h1`
@@ -30,18 +29,27 @@ export const NewsTitle = styled.h1`
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  white-space: normal;
   width: 100%;
 `;
 
-export const NewsDescription = styled.p`
-  font-size: 16px;
+export const NewsUrl = styled.a`
+  font-size: 14px;
+  color: ${EColor.BLUE};
+  text-decoration: none;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-height: 1.4;
-  height: 4.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Form = styled.form`
